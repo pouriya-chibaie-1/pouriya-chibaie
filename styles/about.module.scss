@@ -1,0 +1,28 @@
+@import "./variables";
+.container{
+    background:#1B2430;
+}
+.CardLang{margin: 10px auto;
+
+    display: flex;
+    // box-shadow: -7px -5px 15px 5px #8CFF85;
+    box-shadow: rgba(0,0,0,0.1);
+    border-radius: 7px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;   
+    background-color: #395B64;
+}
+.imgPr{
+    width: 100px;
+    height: 100px;
+}
+.textSkill {
+    font-size: 30px;
+    border-bottom: 1px solid #E7F6F2;
+    margin-bottom: 10px;
+    font-family: 'Poppins';
+    color:#E7F6F2;
+}

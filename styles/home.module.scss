@@ -1,0 +1,362 @@
+@import "variables";
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerDark {
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg_dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLight {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotatedBox {
+    box-shadow: 0 0 7px rgb(0 0 0 / 90%);
+    height: 200%;
+    left: -83%;
+    position: fixed;
+    top: -50%;
+    transform: rotate(-15deg);
+    width: 100%;
+    background-color: $rotated_box;
+}
+
+.profilePic {
+    position: absolute;
+    background-color: wheat;
+    width: 33.33%;
+    height: calc(100vh - 80px);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    box-shadow: 0 0 7px rgb(0 0 0 / 90%);
+    height: calc(100vh - 80px);
+    left: 40px;
+    top: 40px;
+    z-index: 9999 !important;
+}
+
+@media screen and (max-width: 576px) {
+    .aboutMeDark {
+        width: 90vw;
+    }
+
+    .aboutMeLight {
+        width: 90vw;
+    }
+
+    .containerLight {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .containerDark {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profilePic {
+        position: static;
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        margin-bottom: 25px;
+
+    }
+
+    .rotatedBox {
+        display: none;
+    }
+    .aboutBtn{
+        margin-top: 40px;
+    }
+    div.aboutMeDark h1 {
+        font-size: 34px !important;
+    }
+    
+    div.aboutMeLight h1 {
+    
+        font-size: 34px !important;
+    }
+    
+    div.aboutMeDark span {
+        font-size: 34px !important;
+    
+    }    
+    div.aboutMeLight span {
+        font-size: 34px !important;
+    }
+
+}
+
+@media only screen and (min-width: 577px) and (max-width: 991px) {
+    .profilePic {
+        position: static;
+        width: 270px;
+        height: 270px;
+        border-radius: 50%;
+        margin-bottom: 25px;
+    }
+
+    .containerLight {
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .containerDark {
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rotatedBox {
+        display: none;
+    }
+    .aboutBtn{
+        margin-top: 30px;
+    }
+
+}
+
+div.aboutMeDark h1 {
+    color: $rotated_box;
+    font-size: 38px;
+    font-weight: 700 !important;
+}
+
+div.aboutMeLight h1 {
+
+    color: $rotated_box;
+    font-size: 38px;
+    font-weight: 700 !important;
+}
+
+div.aboutMeDark span {
+    text-align: center;
+    color: white;
+    font-size: 38px;
+}
+
+div.aboutMeLight span {
+    text-align: center;
+    color: #666666;
+    font-size: 38px;
+}
+
+.aboutBtn {font-weight: 600;
+    overflow: hidden;
+    width: 229px;
+    position: relative;
+    font-size: 15px;
+    z-index: 9999;
+    display: flex;
+    height: 55px;
+    border: 1px solid $rotated_box;
+    padding: 16px 70px 16px 35px;
+    border-radius: 35px;
+}
+
+.arrowBtn {
+    @include flexCenter;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #ffb400
+}
+
+.aboutMeDark {
+    text-align: left;
+    display: flex;
+    margin: auto;
+    max-width: 575px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.aboutMeLight {
+    text-align: left;
+    display: flex;
+    margin: auto;
+    max-width: 575px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #666666;
+}
+
+.textInHome {
+    line-height: 1.6;
+    
+}
+
+.aboutBtn::before {
+    visibility: hidden;
+    right: -100%;
+    border-radius: 35px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: $rotated_box;
+    top: 0px;
+}
+
+@keyframes toRight {
+    from {
+        visibility: hidden;
+    }
+
+    to {
+        right: 0px;
+    }
+}
+
+.aboutBtn:hover::before {
+    animation-name: toRight;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    visibility: visible;
+    z-index: -1;
+}
+
+.arrowBtn img {
+    width: 17px;
+    height: 19px;
+}
+
+@media only screen  and (max-width:1101px) and (min-width: 992px) {
+    .aboutMeDark {
+        width: 45%;
+        align-items: normal;
+        text-align: left;
+        justify-content: start;
+        margin-right: 12.5vw;
+
+        h1 {
+            font-size: 45px !important;
+            font-weight: 700;
+            width: 100%;
+        }
+
+        h1 span {
+            font-size: 45px !important;
+            font-weight: 700 !important;
+        }
+
+
+    }
+    .aboutBtn{
+        margin-top: 30px;
+    }
+
+    .aboutMeLight {
+        width: 45%;
+        justify-content: start;
+        align-items: normal;
+        text-align: left;
+        margin-right: 12.5vw;
+
+        h1 {
+            font-size: 45px !important;
+            font-weight: 700 !important;
+            width: 100%;
+        }
+
+        h1 span {
+            font-size: 45px !important;
+            font-weight: 700 !important;
+        }
+
+    }
+}
+.aboutBtn:hover{
+    color: #FFF;
+}
+@media only screen  and (min-width: 992px) {
+
+    .aboutMeDark {
+        width: 45%;
+        align-items: normal;
+        text-align: left;
+        justify-content: start;
+        margin-right: 12.5vw;
+
+        h1 {
+            font-size: 45px !important;
+            font-weight: 700;
+            width: 100%;
+        }
+
+        h1 span {
+            font-size: 45px !important;
+            font-weight: 700 !important;
+        }
+
+
+    }
+    .aboutBtn{
+        margin-top: 30px;
+    }
+
+    .aboutMeLight {
+        width: 45%;
+        justify-content: start;
+        align-items: normal;
+        text-align: left;
+        margin-right: 12.5vw;
+
+        h1 {
+            font-size: 50px !important;
+            font-weight: 700 !important;
+            width: 100%;
+        }
+
+        h1 span {
+            font-size: 50px !important;
+            font-weight: 700 !important;
+        }
+
+    }
+
+
+
+}

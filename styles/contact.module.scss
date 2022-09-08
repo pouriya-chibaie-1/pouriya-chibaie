@@ -1,0 +1,55 @@
+@import "variables";
+.container{width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 2fr;
+}
+.title{background-color: $rotated_box;
+   grid-column: 1 / 8; 
+   grid-template-rows: auto;
+}
+.contactContainer{display: grid;
+    background-color: $bg_dark;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+}
+.contact{
+    background-color: $font_awesome_color_dark;
+    display: flex;
+}
+.contactForm{
+display: grid;
+grid-template-columns: 1fr;
+}
+.nameAndEmail{
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+
+input{
+    margin-top: 20px;
+    width: 98%;
+    background-color: #252525;
+    height: 48px;
+    border-radius: 30px;
+}
+input::placeholder{
+    padding-left: 30px;
+}
+ }
+ .subject{
+    display: flex;
+    justify-content: center;
+    
+    input{  margin-top: 20px;
+        width: 98%;
+        background-color: #252525;
+        height: 48px;
+        border-radius: 30px;
+    }
+    input::placeholder{
+        padding-left: 30px;
+    }
+ }
