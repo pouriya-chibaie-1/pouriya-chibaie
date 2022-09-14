@@ -15,4 +15,3 @@ const SkillList={data :[{"title":"Next js"    , "imgSrc":`${PrImageLoc}nextjs.sv
 export default function handler(req, res) {
     res.status(200).json(SkillList)
   }
-  
